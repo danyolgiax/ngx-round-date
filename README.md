@@ -44,3 +44,7 @@ Simple round-date pipe
     ```html
     <span>{{myDate | roundDate:10}}</span>
     ```  
+
+### License
+
+The MIT License (see the [LICENSE](https://github.com/danyolgiax/ngx-round-date/blob/main/LICENCE) file for the full text)
