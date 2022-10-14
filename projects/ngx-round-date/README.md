@@ -1,23 +1,28 @@
-# Simple round-date pipe
-
 ## ngx-round-date
 
 [![npm version](https://badge.fury.io/js/ngx-round-date.svg)](http://badge.fury.io/js/ngx-round-date)
 [![npm downloads](https://img.shields.io/npm/dm/ngx-round-date.svg)](https://npmjs.org/ngx-round-date)
 
-Simple round-date pipe
+**Simple round-date pipe**
 
-    ```typescript
+- Compatible with [Angular](https://angular.io/) version 12.2.0
+
+## Example
+Code:
+
+```typescript
 	this.testDate=new Date(2022,12,31,23,59,59);
-    ```
+```
+    
+Template:
 
-    ```html
+ ```html
     <span>{{testDate | roundDate}}</span> --> 01/02/2023 00:00:00
-    ```  
+```
 
   
 
-- Compatible with [Angular](https://angular.io/) version 12.2.0
+
 
 
 ## Usage
