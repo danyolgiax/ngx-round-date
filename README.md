@@ -1,25 +1,46 @@
-# NgxRoundDate
+# Simple round-date pipe
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
+## ngx-round-date
 
-## Code scaffolding
+[![npm version](https://badge.fury.io/js/ngx-round-date.svg)](http://badge.fury.io/js/ngx-round-date)
+[![npm downloads](https://img.shields.io/npm/dm/ngx-round-date.svg)](https://npmjs.org/ngx-round-date)
 
-Run `ng generate component component-name --project ngx-round-date` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-round-date`.
-> Note: Don't forget to add `--project ngx-round-date` or else it will be added to the default project in your `angular.json` file. 
+Simple round-date pipe
 
-## Build
+- Compatible with [Angular](https://angular.io/) version 12.2.0
 
-Run `ng build ngx-round-date` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Usage
 
-After building your library with `ng build ngx-round-date`, go to the dist folder `cd dist/ngx-round-date` and run `npm publish`.
+1. Install **ngx-round-date** through [npm](https://www.npmjs.com/package/ngx-round-date) package manager using the following command:
 
-## Running unit tests
+    ```bash
+    npm i ngx-round-date --save
+    ```
 
-Run `ng test ngx-round-date` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Add RoundDatePipeModule into your AppModule class. app.module.ts would look like this:
 
-## Further help
+    ```typescript
+    import {NgModule} from '@angular/core';
+    import {BrowserModule} from '@angular/platform-browser';
+    import {AppComponent} from './app.component';
+    import { RoundDatePipeModule } from 'ngx-round-date';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    @NgModule({
+      imports: [BrowserModule, RoundDatePipeModule],
+      declarations: [AppComponent],
+      bootstrap: [AppComponent],
+    })
+    export class AppModule {
+    }
+    ```
+    
+3. Add the pipe into html (default round 5 minutes)
 
+    ```html
+    <span>{{myDate | roundDate}}</span>
+    ```  
+    or
+    ```html
+    <span>{{myDate | roundDate:10}}</span>
+    ```  
