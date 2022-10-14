@@ -7,6 +7,16 @@
 
 Simple round-date pipe
 
+    ```typescript
+	this.testDate=new Date(2022,12,31,23,59,59);
+    ```
+
+    ```html
+    <span>{{testDate | roundDate}}</span> --> 01/02/2023 00:00:00
+    ```  
+
+  
+
 - Compatible with [Angular](https://angular.io/) version 12.2.0
 
 
@@ -38,11 +48,11 @@ Simple round-date pipe
 3. Add the pipe into html (default round 5 minutes)
 
     ```html
-    <span>{{myDate | roundDate}}</span>
+    <span>{{testDate | roundDate}}</span>
     ```  
     or
     ```html
-    <span>{{myDate | roundDate:10}}</span>
+    <span>{{testDate | roundDate:10}}</span>
     ```  
 
 ### License
