@@ -1,27 +1,46 @@
-# DoxoNgxLibs
+# Simple round-date pipe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.18.
+## ngx-round-date
 
-## Development server
+[![npm version](https://badge.fury.io/js/ngx-round-date.svg)](http://badge.fury.io/js/ngx-round-date)
+[![npm downloads](https://img.shields.io/npm/dm/ngx-round-date.svg)](https://npmjs.org/ngx-round-date)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Simple round-date pipe
 
-## Code scaffolding
+- Compatible with [Angular](https://angular.io/) version 12.2.0
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Usage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Install **ngx-round-date** through [npm](https://www.npmjs.com/package/ngx-round-date) package manager using the following command:
 
-## Running unit tests
+    ```bash
+    npm i ngx-round-date --save
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Add RoundDatePipeModule into your AppModule class. app.module.ts would look like this:
 
-## Running end-to-end tests
+    ```typescript
+    import {NgModule} from '@angular/core';
+    import {BrowserModule} from '@angular/platform-browser';
+    import {AppComponent} from './app.component';
+    import { RoundDatePipeModule } from 'ngx-round-date';
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    @NgModule({
+      imports: [BrowserModule, RoundDatePipeModule],
+      declarations: [AppComponent],
+      bootstrap: [AppComponent],
+    })
+    export class AppModule {
+    }
+    ```
+    
+3. Add the pipe into html (default round 5 minutes)
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```html
+    <span>{{myDate | roundDate}}</span>
+    ```  
+    or
+    ```html
+    <span>{{myDate | roundDate:10}}</span>
+    ```  
