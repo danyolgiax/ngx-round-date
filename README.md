@@ -11,17 +11,21 @@
 Code:
 
 ```typescript
-	this.testDate=new Date(2022,12,31,23,59,59);
+this.testDate=new Date(2022,12,31,23,59,59);
 ```
     
 Template:
 
- ```html
-    <span>{{testDate | roundDate}}</span> --> 01/02/2023 00:00:00
+```html
+<span>{{testDate | roundDate}}</span> 
 ```
 
   
+It displays:
 
+```html
+01/02/2023 00:00:00
+```
 
 
 
